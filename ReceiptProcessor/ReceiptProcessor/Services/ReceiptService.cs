@@ -70,6 +70,16 @@ namespace ReceiptProcessor.Services
             return context.Receipts.Any(r => r.Id == receiptId);
         }
 
+        public List<Receipt> GetAll()
+        {
+            using ReceiptContext context = new();
+
+            return [.. context.Receipts
+                .Include(r => r.Items)
+                .OrderBy(r => r.PurchaseDate)
+                .ThenBy(r => r.PurchaseTime)];
+        }
+
         public Guid Process(Receipt receipt)
         {
             using ReceiptContext context = new();

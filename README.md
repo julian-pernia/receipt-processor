@@ -1,8 +1,7 @@
 # Receipt Processor
  
 ## This project is to demonstrate proficiency in API development as well as some Docker exposure. This project uses .NET Core 8.0 C#
-
-## This project is based off of a coding challenge by Fetch Rewards as defined [here](https://github.com/fetch-rewards/receipt-processor-challenge).
+This project is based off of a coding challenge by Fetch Rewards as defined [here](https://github.com/fetch-rewards/receipt-processor-challenge).
 
 ### For running this project in a Docker container, there is a Dockerfile in `\ReceiptProcessor\ReceiptProcessor\Dockerfile`. There should not be any extra build parameters required for it to run.
 

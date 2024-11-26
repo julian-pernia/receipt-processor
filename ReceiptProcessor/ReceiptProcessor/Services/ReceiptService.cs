@@ -36,7 +36,7 @@ namespace ReceiptProcessor.Services
             {
                 if (item.ShortDescription.Trim().Length % 3 == 0)
                 {
-                    points = (int)Math.Ceiling(decimal.Parse(item.Price) * 0.2M);
+                    points += (int)Math.Ceiling(decimal.Parse(item.Price) * 0.2M);
                 }
             }
 

@@ -7,6 +7,7 @@ using ReceiptProcessor.Services;
 namespace ReceiptProcessor.Controllers
 {
     [ApiController]
+    [Route("[controller]")]
     public class ReceiptsController(IReceiptService receiptService, ILogger<ReceiptsController> logger) : Controller
     {
         private readonly IReceiptService _receiptService = receiptService;
@@ -69,6 +70,14 @@ namespace ReceiptProcessor.Controllers
             _receiptService.ClearAllReceipts();
 
             return Ok();
+        }
+
+        [HttpGet("all")]
+        public IActionResult GetAllReceipts()
+        {
+            var receipts = _receiptService.GetAll();
+
+            return Ok(receipts);
         }
     }
 }

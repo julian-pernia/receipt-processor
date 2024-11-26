@@ -7,6 +7,7 @@ This project is based off of a coding challenge by Fetch Rewards as defined [her
 
 ### Once the project is running, these are the available endpoints:
 
-1. (HTTP POST) `/receipts/process` // Processes a receipt request. Receipt payload definition can be found [here](https://github.com/fetch-rewards/receipt-processor-challenge/blob/main/api.yml).
-2. (HTTP GET) `/receipts/{Receipt GUID}/points` // Returns the amount of points earned by the receipt with the given GUID. Points earned are defined [here](https://github.com/fetch-rewards/receipt-processor-challenge?tab=readme-ov-file#rules).
-3. (HTTP DELETE) `/receipts/clear` // For ease of use, I included an endpoint that deletes all created receipts. This would not normally be included in a product API.
+1. (HTTP POST) `/Receipts/process` // Processes a receipt request. Receipt payload definition can be found [here](https://github.com/fetch-rewards/receipt-processor-challenge/blob/main/api.yml).
+2. (HTTP GET) `/Receipts/{Receipt GUID}/points` // Returns the amount of points earned by the receipt with the given GUID. Points earned are defined [here](https://github.com/fetch-rewards/receipt-processor-challenge?tab=readme-ov-file#rules).
+4. (HTTP GET) `/Receipts/all` // For ease of use, I included an endpoint that gets all existing receipts.
+3. (HTTP DELETE) `/Receipts/clear` // For ease of use, I included an endpoint that deletes all created receipts. This would not normally be included in a product API.

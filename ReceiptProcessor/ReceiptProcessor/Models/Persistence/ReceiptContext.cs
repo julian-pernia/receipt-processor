@@ -9,16 +9,12 @@ namespace ReceiptProcessor.Models.Persistence
         }
 
         public DbSet<Receipt> Receipts { get; set; }
+        public DbSet<Item> Items { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             string directory = Path.GetFullPath(Directory.GetCurrentDirectory());
-            string filename = Path.Join(directory, "/data", "Receipts.db");
-
-            if (!File.Exists(filename))
-            {
-                File.Create(filename);
-            }
+            string filename = Path.Join(directory, "Receipts.db");
 
             builder.UseSqlite($"Data Source={filename}");
         }
